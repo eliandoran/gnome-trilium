@@ -10,6 +10,12 @@
   
   --monospace-font-family: "Source Code Pro");
   --monospace-font-size: 10px;
+  
+  --left-pane-background-color: #fafafa;
+  --left-pane-text-color: #323232;
+ 
+  --launcher-pane-background-color: #ebebeb; 
+  --header-height: 47px;
 }
 
 /*
@@ -26,7 +32,7 @@
 
 #launcher-pane {
   width: 100% !important;
-  height: 53px;
+  height: var(--header-height);
   flex-direction: row !important;
   grid-area: launcher;
 }
@@ -37,7 +43,7 @@
 
 #launcher-pane .launcher-button {
   width: 53px;
-  height: 53px;
+  height: var(--header-height) !important;
 }
 
 #root-widget > .gutter.gutter-horizontal {
@@ -54,3 +60,12 @@
   grid-area: content;
   width: 100% !important;
 }
+
+/*
+ * Header style (incl. quick search of the left side bar)
+*/
+.quick-search {
+  height: var(--header-height) !important;
+  background: var(--launcher-pane-background-color);
+}
+
