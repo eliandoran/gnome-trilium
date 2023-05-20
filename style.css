@@ -1,0 +1,13 @@
+:root {
+  --main-font-family: 'Cantarell';
+  --main-font-size: 11pt;
+  
+  --detail-font-family: var(--main-font-family);
+  --detail-font-size: var(--main-font-size);
+  
+  --tree-font-family: var(--main-font-family);
+  --tree-font-size: var(--main-font-size);
+  
+  --monospace-font-family: "Source Code Pro");
+  --monospace-font-size: 10px;
+}
