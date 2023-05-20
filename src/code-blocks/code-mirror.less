@@ -9,15 +9,10 @@
     .cm-quote,
     .cm-negative,
     .cm-positive,
-    .cm-keyword,
     .cm-atom,
     .cm-number,
     .cm-def,
-    .cm-variable-2,
-    .cm-variable-3,
-    .cm-type,
-    .cm-comment,    
-    .cm-qualifier,
+    .cm-type,    
     .cm-builtin,
     .cm-bracket,
     .cm-hr,
@@ -25,6 +20,10 @@
     .cm-error,
     .cm-invalidchar {
         color: var(--code-color-normal);
+    }
+
+    .cm-comment {
+        color: var(--code-color-comment);
     }
 
     .cm-meta {
@@ -35,13 +34,28 @@
         color: var(--code-color-type);
     }
 
-    .cm-attribute {
+    .cm-attribute,
+    .cm-property {
         color: var(--code-color-meta);
     }
 
+    .cm-variable-2,
+    .cm-qualifier {
+        color: var(--code-color-attribute);
+    }
+
     .cm-string,
-    .cm-string-2 {
+    .cm-string-2,
+    .cm-variable-3 {
         color: var(--code-color-literal);
+    }
+
+    .cm-callee {
+        color: var(--code-color-builtin);
+    }
+
+    .cm-keyword {
+        color: var(--code-color-meta-alt-alt);
     }
 
     .cm-header,
@@ -63,7 +77,6 @@
 
     .cm-s-default .cm-variable,
     .cm-s-default .cm-punctuation,
-    .cm-s-default .cm-property,
     .cm-s-default .cm-operator {}
     
     .CodeMirror-selected {
