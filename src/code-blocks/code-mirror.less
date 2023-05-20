@@ -56,5 +56,15 @@
     
     .CodeMirror-selected {
         background: var(--code-selection-active-background);
+
+        @border-radius: 8px;
+
+        &:nth-of-type(3) {  // middle
+            border-top-left-radius: @border-radius;
+        }
+
+        &:nth-of-type(2) { // bottom
+            border-bottom-left-radius: @border-radius;
+        }
     }
 }
