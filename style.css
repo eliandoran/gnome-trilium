@@ -25,6 +25,12 @@
   --inactive-tab-background-color: transparent;
   --inactive-tab-hover-background-color: #dedede;
   --inactive-tab-text-color: var(--active-tab-text-color);
+  
+  --gnome-close-button-inactive-background-color: #d8d8d8;
+  --gnome-close-button-hover-background-color: #cfcfcf;
+  --gnome-close-button-pressed-background-color: #b3b3b3;
+  --gnome-close-button-size: 24px;
+  --gnome-close-button-hmargin: 11px;
 }
 
 /*
@@ -148,4 +154,43 @@
 .component.tab-row-widget .note-tab-wrapper {
   top: 5px !important;
   bottom: 5px !important;
+}
+
+/*
+ * Title bar buttons
+ */
+#launcher-pane {
+  padding-right: calc(var(--gnome-close-button-size) + var(--gnome-close-button-hmargin) * 2) !important;
+}
+
+.title-bar-buttons {
+  position: fixed;
+  top: 0;
+  right: var(--gnome-close-button-hmargin);
+  top: calc((var(--header-height) - var(--gnome-close-button-size)) / 2);
+}
+
+.title-bar-buttons > div {
+  width: unset !important;
+  height: unset !important;
+}
+
+.title-bar-buttons .minimize-btn,
+.title-bar-buttons .maximize-btn {
+  display: none !important;
+}
+
+.title-bar-buttons .close-btn > button {
+  width: var(--gnome-close-button-size);
+  height: var(--gnome-close-button-size);
+  background-color: var(--gnome-close-button-inactive-background-color) !important;
+  border-radius: 50%;
+}
+
+.title-bar-buttons .close-btn > button:hover {
+  background-color: var(--gnome-close-button-hover-background-color) !important;
+}
+
+.title-bar-buttons .close-btn > button:active {
+  background-color: var(--gnome-close-button-pressed-background-color) !important;
 }
