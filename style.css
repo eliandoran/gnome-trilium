@@ -187,7 +187,7 @@ ul.fancytree-container li {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: -500%;
   right: 0;
   bottom: 0;
   background: var(--active-item-background-color);
