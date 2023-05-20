@@ -18,6 +18,13 @@
   --header-height: 47px;
   
   --border-color: #dbdbdb;
+  
+  --active-tab-background-color: #d9d9d9;
+  --active-tab-hover-background-color: #d2d2d2;
+  --active-tab-text-color: #2f2f2f;
+  --inactive-tab-background-color: transparent;
+  --inactive-tab-hover-background-color: #dedede;
+  --inactive-tab-text-color: var(--active-tab-text-color);
 }
 
 /*
@@ -74,3 +81,19 @@
   border-bottom: 1px solid var(--border-color);
 }
 
+/*
+ * Tab bar
+ */
+#rest-pane > .component:first-of-type {
+  height: 45px !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.component.tab-row-widget {
+  --main-background-color: var(--launcher-pane-background-color);
+}
+
+.component.tab-row-widget .note-tab-wrapper {
+  top: 5px !important;
+  bottom: 5px !important;
+}
