@@ -82,9 +82,15 @@
 
 #launcher-pane {
   contain: unset !important;
+  align-items: center;
 }
 
-#launcher-pane .launcher-button {
+#launcher-pane .launcher-button.bx-chevrons-left {
+  order: -1000;
+}
+
+#launcher-pane .launcher-button,
+#launcher-pane .global-menu-button {
   font-size: 19px !important;
   background-color: #dedede !important;
   border-radius: 4px;
@@ -117,6 +123,14 @@
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
+}
+
+#launcher-pane .global-menu {
+  order: 1000;
+}
+
+#launcher-pane .global-menu .global-menu-button {
+  background-size: 16px;
 }
 
 /*
