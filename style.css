@@ -338,9 +338,16 @@ ul.fancytree-container li {
 }
 
 .ribbon-tab-title .bx {
-  font-size: 19px !important;
+  font-size: 16px !important;
 }
 
 .ribbon-tab-spacer {
   display: none;
+}
+
+/*
+ * Note split look
+ */
+.note-split:not(.hidden-ext) + .note-split:not(.hidden-ext) {
+    border-left: 1px solid var(--border-color);
 }
