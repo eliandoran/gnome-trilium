@@ -16,6 +16,8 @@
  
   --launcher-pane-background-color: #ebebeb; 
   --header-height: 47px;
+  
+  --border-color: #dbdbdb;
 }
 
 /*
@@ -35,6 +37,7 @@
   height: var(--header-height);
   flex-direction: row !important;
   grid-area: launcher;
+  border-bottom: 1px solid var(--border-color);
 }
 
 #launcher-container {
@@ -42,8 +45,8 @@
 }
 
 #launcher-pane .launcher-button {
-  width: 53px;
-  height: var(--header-height) !important;
+  width: 34px;
+  height: 34px !important;
 }
 
 #root-widget > .gutter.gutter-horizontal {
@@ -54,6 +57,7 @@
 #left-pane {
   grid-area: tree;
   width: 240px !important;
+  border-right: 1px solid var(--border-color);
 }
 
 #rest-pane {
@@ -67,5 +71,6 @@
 .quick-search {
   height: var(--header-height) !important;
   background: var(--launcher-pane-background-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
