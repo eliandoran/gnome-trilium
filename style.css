@@ -46,6 +46,9 @@
   --scrollbar-thumb-active-background: #747474;
   
   --ribbon-height: 37px;
+  --ribbon-popup-background-color: #fff;
+  --ribbon-popup-border-color: #d8d8d8;
+  --ribbon-popup-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 /*
@@ -357,6 +360,19 @@ ul.fancytree-container li {
   right: 0;
   height: var(--ribbon-height);
   border-top: 1px solid var(--border-color);
+}
+
+.ribbon-body-container {
+  position: relative;
+  bottom: var(--ribbon-height);
+  background: var(--ribbon-popup-background-color);
+  border: 1px solid var(--ribbon-popup-border-color);
+  border-radius: 10px;
+  z-index: 10000;
+  max-width: 400px;
+  box-shadow: 0 0 6px var(--ribbon-popup-shadow-color);
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 /*
