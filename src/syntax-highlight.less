@@ -10,13 +10,13 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --code-color1: #7782bb;
-        --code-color2: #33b2a4;
-        --code-color3: #f37402;
-        --code-color4: #f5c211;
-        --code-color5: grey; // undefined
-        --code-color6: red; // undefined
-        --code-color7: #00b0e8; // undefined
+        --code-color-normal: #c0bfbc;
+        --code-color-comment: #77767b;
+        --code-color-keyword: #ffa348;
+        --code-color-type: #58bea6;
+        --code-color-meta: #db5e02;
+        --code-color-literal: #7d8ac7;
+        --code-color-link: #62a0ea;
     }
 }
 
@@ -33,55 +33,65 @@
     
     .hljs {
         background: #fff;
-        color: #000
+        color: var(--code-color-normal);
+    }
+
+    .hljs-title,
+    .hljs-built_in {
+        color: var(--code-color-normal);
     }
     
     .hljs-comment,
     .hljs-quote,
     .hljs-variable {
-        color: var(--code-color1);
+        color: var(--code-color-comment);
     }
     
-    .hljs-built_in,
     .hljs-keyword,
     .hljs-name,
     .hljs-selector-tag,
     .hljs-tag {
-        color: var(--code-color2);
+        color: var(--code-color-keyword);
     }
     
     .hljs-addition,
     .hljs-attribute,
-    .hljs-literal,
     .hljs-section,
     .hljs-string,
     .hljs-template-tag,
     .hljs-template-variable,
-    .hljs-title,
     .hljs-string .hljs-tag,
     .hljs-type {
-        color: var(--code-color3);
+        color: var(--code-color-type);
+    }
+
+    .hljs-literal {
+        color: var(--code-color-literal);
+    }
+
+    .hljs-type {
+        font-weight: bold;
     }
     
     .hljs-deletion,
     .hljs-meta,
     .hljs-selector-attr,
     .hljs-selector-pseudo {
-        color: var(--code-color4);
+        color: var(--code-color-meta);
     }
     
     .hljs-doctag {
-        color: var(--code-color5);
+        color: var(--code-color-normal);
     }
     
     .hljs-attr {
-        color: var(--code-color6);
+        color: var(--code-color-normal);
     }
     
     .hljs-bullet,
     .hljs-link,
     .hljs-symbol {
-        color: var(--code-color7);
+        color: var(--code-color-normal);
     }
     
     .hljs-emphasis {
