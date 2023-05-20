@@ -26,6 +26,10 @@
   --inactive-tab-hover-background-color: #dedede;
   --inactive-tab-text-color: var(--active-tab-text-color);
   
+  --left-pane-text-color: #323232;
+  --active-item-text-color: var(--left-pane-text-color);
+  --active-item-background-color: #e6e6e6;
+  
   --toolbar-button-inactive-background-color: transparent;
   --toolbar-button-active-background-color: #cdcdcd;
   --toolbar-button-hover-background-color: #dedede;
@@ -68,13 +72,21 @@
 
 #left-pane {
   grid-area: tree;
-  width: 240px !important;
+  width: 301px !important;
   border-right: 1px solid var(--border-color);
 }
 
 #rest-pane {
   grid-area: content;
   width: 100% !important;
+}
+
+/*
+ * Tree style
+ */
+.fancytree-node {
+  height: 30px;
+  border: 0 !important;
 }
 
 /*
