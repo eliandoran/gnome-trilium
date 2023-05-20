@@ -306,3 +306,31 @@ ul.fancytree-container li {
 .title-bar-buttons .close-btn > button:active {
   background-color: var(--gnome-close-button-pressed-background-color) !important;
 }
+
+/*
+ * Ribbon
+ */
+.component.note-split:not(.hidden-ext) {
+  display: grid !important;
+  grid-template-areas: "header header"
+    "content sidebar";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+}
+
+.component.note-split > .component {
+  grid-area: content;
+}
+
+.component.note-split > .component.title-row {
+  grid-area: header;
+}
+
+.component.note-split > .component.ribbon-container {
+  grid-area: sidebar;
+  max-width: 300px;
+}
+
+.ribbon-tab-container {
+  display: block !important;
+}
