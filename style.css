@@ -106,7 +106,8 @@
   align-items: center;
 }
 
-#launcher-pane .launcher-button.bx-chevrons-left {
+#launcher-pane .launcher-button.bx-chevrons-left,
+#launcher-pane .launcher-button.bx-chevrons-right {
   order: -1000;
 }
 
