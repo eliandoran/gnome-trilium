@@ -278,7 +278,7 @@ ul.fancytree-container li {
   bottom: 5px !important;
 }
 
-.component.tab-row-widget .note-tab-wrapper:first-of-type {
+.component.tab-row-widget .note-tab:first-of-type .note-tab-wrapper {
   margin-left: 10px !important;
 }
 
@@ -290,7 +290,6 @@ ul.fancytree-container li {
 .component.tab-row-widget .note-new-tab {
   top: 5px;
   right: 5px;
-
 }
 
 /*
