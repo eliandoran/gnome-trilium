@@ -9,7 +9,6 @@
     .cm-quote,
     .cm-negative,
     .cm-positive,
-    .cm-atom,
     .cm-number,
     .cm-def,
     .cm-builtin,
@@ -24,8 +23,8 @@
     .cm-comment {
         color: var(--code-color-comment);
     }
-
-    .cm-type,
+    
+    .cm-type,    
     .cm-tag {
         color: var(--code-color-type);
     }
@@ -39,10 +38,11 @@
     .cm-qualifier {
         color: var(--code-color-attribute);
     }
-
+    
     .cm-string,
-    .cm-string-2,
-    .cm-variable-3 {
+    .cm-string-2
+    .cm-variable-3,
+    .cm-atom {
         color: var(--code-color-literal);
     }
 
@@ -59,7 +59,8 @@
     .cm-strong,
     .cm-variable-3,
     .cm-tag,
-    .cm-keyword {
+    .cm-keyword,
+    .cm-type {
         font-weight: bold;
     }
 
@@ -81,6 +82,17 @@
     
     // Language-specific.
     .component.note-split {
+        &.mime-text-x-csrc { // C
+            .cm-meta {
+                color: var(--code-color-meta);
+                font-weight: bold;
+            }
+
+            .cm-string {
+                color: var(--code-color-type);
+            }
+        }
+
         &.mime-text-xml {
             .cm-meta {
                 color: var(--code-color-meta-alt);
@@ -88,6 +100,12 @@
 
             .cm-tag {
                 font-weight: unset;
+            }
+        }      
+        
+        &.mime-text-css {
+            .cm-variable-3 {
+                color: var(--code-color-literal);
             }
         }
     }
