@@ -78,7 +78,7 @@
     --inactive-tab-text-color: var(--active-tab-text-color);
     
     --active-item-text-color: var(--left-pane-text-color);
-    --active-item-background-color: #e6e6e6;
+    --active-item-background-color: #3a3a3a;
     --toolbar-button-inactive-background-color: transparent;
     --toolbar-button-active-background-color: #cdcdcd;
     --toolbar-button-hover-background-color: #dedede;
