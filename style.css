@@ -6,7 +6,7 @@
   --detail-font-size: var(--main-font-size);
   
   --tree-font-family: var(--main-font-family);
-  --tree-font-size: var(--main-font-size);
+  --tree-font-size: 10pt;
   
   --monospace-font-family: "Source Code Pro");
   --monospace-font-size: 10px;
@@ -87,6 +87,12 @@
 .fancytree-node {
   height: 30px;
   border: 0 !important;
+}
+
+.fancytree-expander::before {
+  font-size: 1em !important;
+  font-weight: bold !important;
+  color: var(--left-pane-text-color);
 }
 
 /*
