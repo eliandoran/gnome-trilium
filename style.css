@@ -108,6 +108,17 @@
   flex: unset !important;
 }
 
+#launcher-pane .sync-status-widget {
+  position: relative;
+}
+
+#launcher-pane .sync-status-widget .sync-status-icon {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
 /*
  * Tab bar
  */
