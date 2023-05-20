@@ -30,6 +30,8 @@
   --active-item-text-color: var(--left-pane-text-color);
   --active-item-background-color: #e6e6e6;
   
+  --tabbar-height: 45px;
+  
   --toolbar-button-inactive-background-color: transparent;
   --toolbar-button-active-background-color: #cdcdcd;
   --toolbar-button-hover-background-color: #dedede;
@@ -84,7 +86,7 @@
 #root-widget {
   display: grid !important;
   grid-template-areas:
-    "tree gutter launcher"
+    "launcher launcher launcher"
     "tree gutter content";
   grid-template-columns: auto auto 1fr;
   grid-template-rows: auto 1fr;
@@ -100,6 +102,7 @@
 
 #launcher-container {
   flex-direction: row !important;
+  justify-content: center;
 }
 
 #root-widget > .gutter.gutter-horizontal {
@@ -175,20 +178,17 @@ ul.fancytree-container li {
 /*
  * Header style (incl. quick search of the left side bar)
 */
-.quick-search,
 #launcher-pane {
   -webkit-app-region: drag;
 }
 
-.quick-search input,
 #launcher-pane button,
 .title-bar-buttons {
   -webkit-app-region: no-drag;
 }
 
 .quick-search {
-  height: var(--header-height) !important;
-  background: var(--launcher-pane-background-color);
+  height: var(--tabbar-height) !important;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -264,12 +264,12 @@ ul.fancytree-container li {
  * Tab bar
  */
 #rest-pane > .component:first-of-type {
-  height: 45px !important;
+  height: var(--tabbar-height) !important;
   border-bottom: 1px solid var(--border-color);
 }
 
 .component.tab-row-widget {
-  --main-background-color: var(--launcher-pane-background-color);
+  --main-background-color: var(--left-pane-background-color);
 }
 
 .component.tab-row-widget .note-tab-wrapper {
