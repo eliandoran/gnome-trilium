@@ -51,11 +51,6 @@
   flex-direction: row !important;
 }
 
-#launcher-pane .launcher-button {
-  width: 34px;
-  height: 34px !important;
-}
-
 #root-widget > .gutter.gutter-horizontal {
   display: none !important;
   grid-area: gutter;
@@ -79,6 +74,25 @@
   height: var(--header-height) !important;
   background: var(--launcher-pane-background-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+#launcher-container {
+  align-items: center;
+}
+
+#launcher-pane .launcher-button {
+  font-size: 19px !important;
+  background-color: #dedede !important;
+  border-radius: 4px;
+  width: 34px;
+  height: 34px !important;
+  padding: 0 !important;
+  margin-left: 6px;
+}
+
+#launcher-pane .spacer {
+  width: 18px;
+  flex: unset !important;
 }
 
 /*
