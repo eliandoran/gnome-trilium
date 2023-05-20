@@ -26,6 +26,10 @@
   --inactive-tab-hover-background-color: #dedede;
   --inactive-tab-text-color: var(--active-tab-text-color);
   
+  --toolbar-button-inactive-background-color: transparent;
+  --toolbar-button-active-background-color: #cdcdcd;
+  --toolbar-button-hover-background-color: #dedede;
+  
   --gnome-close-button-inactive-background-color: #d8d8d8;
   --gnome-close-button-hover-background-color: #cfcfcf;
   --gnome-close-button-pressed-background-color: #b3b3b3;
@@ -109,12 +113,22 @@
 #launcher-pane .launcher-button,
 #launcher-pane .global-menu-button {
   font-size: 19px !important;
-  background-color: #dedede !important;
+  background-color: var(--toolbar-button-inactive-background-color) !important;
   border-radius: 4px;
   width: 34px;
   height: 34px !important;
   padding: 0 !important;
   margin-left: 6px;
+}
+
+#launcher-pane .launcher-button:hover,
+#launcher-pane .global-menu-button:hover {
+  background-color: var(--toolbar-button-hover-background-color) !important;
+}
+
+#launcher-pane .launcher-button:active,
+#launcher-pane .global-menu-button:hover {
+  background-color: var(--toolbar-button-active-background-color) !important;
 }
 
 #launcher-pane .dropdown {
