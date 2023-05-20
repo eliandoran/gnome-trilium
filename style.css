@@ -117,6 +117,25 @@ ul.fancytree-container li {
 }
 
 /*
+ *Tree actions
+ */
+.tree-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-actions {
+  position: unset !important;
+  background: unset !important;
+  border-top: 1px solid var(--border-color);
+  justify-content: space-evenly !important;
+}
+
+.tree-actions button.tree-floating-button {
+  font-size: 16px;
+}
+
+/*
  * Header style (incl. quick search of the left side bar)
 */
 .quick-search,
