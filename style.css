@@ -11,3 +11,25 @@
   --monospace-font-family: "Source Code Pro");
   --monospace-font-size: 10px;
 }
+
+/*
+ * Move launcher bar on top
+ */
+#root-widget {
+  flex-wrap: wrap;
+}
+
+#launcher-pane {
+  width: 100vw !important;
+  height: 53px;
+  flex-direction: row !important;
+}
+
+#launcher-container {
+  flex-direction: row !important;
+}
+
+#launcher-pane .launcher-button {
+  width: 53px;
+  height: 53px;
+}
