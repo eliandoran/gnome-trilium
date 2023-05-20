@@ -207,11 +207,12 @@ ul.fancytree-container li {
 }
 
 #launcher-pane .launcher-button,
-#launcher-pane .global-menu-button {
+#launcher-pane .global-menu-button,
+.note-new-tab {
   font-size: 19px !important;
   background-color: var(--toolbar-button-inactive-background-color) !important;
   border-radius: 4px;
-  width: 34px;
+  width: 34px !important;
   height: 34px !important;
   padding: 0 !important;
   margin-left: 6px;
@@ -275,6 +276,21 @@ ul.fancytree-container li {
 .component.tab-row-widget .note-tab-wrapper {
   top: 5px !important;
   bottom: 5px !important;
+}
+
+.component.tab-row-widget .note-tab-wrapper:first-of-type {
+  margin-left: 10px !important;
+}
+
+.component.tab-row-widget .note-tab-title {
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.component.tab-row-widget .note-new-tab {
+  top: 5px;
+  right: 5px;
+
 }
 
 /*
