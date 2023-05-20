@@ -75,16 +75,14 @@
         color: var(--code-color-literal);
     }
 
+    .hljs-keyword,
     .hljs-type,
     .hljs-selector-pseudo,
     .hljs-selector-tag {
         font-weight: bold;
-    }
+    }    
 
-    .hljs-meta {
-        color: var(--code-color-meta-alt);
-    }
-
+    .hljs-meta,
     .hljs-deletion,
     .hljs-attr .hljs-tag,
     .hljs-selector-attr {
@@ -114,7 +112,13 @@
         font-weight: 700;
     }
 
-    // CSS-specific.
+    // Language-specific.
+    .language-text-xml {
+        .hljs-meta {
+            color: var(--code-color-meta-alt);
+        }
+    }
+
     .language-text-css {
         .hljs-meta {
             font-weight: bold;
