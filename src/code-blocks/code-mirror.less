@@ -68,8 +68,14 @@
         }
     }
 
+    // Transparent selection (selector is flimsy).
+    .CodeMirror-lines > div > div:nth-of-type(3) {
+        z-index: 1000;
+        opacity: 0.6;
+    }
+
     .cm-overlay.cm-matchhighlight {
         color: var(--code-selection-match-foreground);
-        background-color: var(--code-selection-match-background);
+        background-color: var(--code-selection-match-background);        
     }
 }
