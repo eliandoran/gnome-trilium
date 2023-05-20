@@ -12,7 +12,6 @@
     .cm-atom,
     .cm-number,
     .cm-def,
-    .cm-type,    
     .cm-builtin,
     .cm-bracket,
     .cm-hr,
@@ -26,10 +25,7 @@
         color: var(--code-color-comment);
     }
 
-    .cm-meta {
-        color: var(--code-color-meta-alt);
-    }
-
+    .cm-type,
     .cm-tag {
         color: var(--code-color-type);
     }
@@ -54,6 +50,7 @@
         color: var(--code-color-builtin);
     }
 
+    .cm-meta,
     .cm-keyword {
         color: var(--code-color-meta-alt-alt);
     }
@@ -82,6 +79,19 @@
     .cm-s-default .cm-punctuation,
     .cm-s-default .cm-operator {}
     
+    // Language-specific.
+    .component.note-split {
+        &.mime-text-xml {
+            .cm-meta {
+                color: var(--code-color-meta-alt);
+            }
+
+            .cm-tag {
+                font-weight: unset;
+            }
+        }
+    }
+
     .CodeMirror-selected {
         background: var(--code-selection-active-background);
 
