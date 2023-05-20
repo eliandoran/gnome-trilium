@@ -76,6 +76,17 @@
 /*
  * Header style (incl. quick search of the left side bar)
 */
+.quick-search,
+#launcher-pane {
+  -webkit-app-region: drag;
+}
+
+.quick-search input,
+#launcher-pane button,
+.title-bar-buttons {
+  -webkit-app-region: no-drag;
+}
+
 .quick-search {
   height: var(--header-height) !important;
   background: var(--launcher-pane-background-color);
