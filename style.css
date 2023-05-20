@@ -345,6 +345,20 @@ ul.fancytree-container li {
   display: none;
 }
 
+.split-note-container-widget {
+  position: relative;
+}
+
+.split-note-container-widget::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--ribbon-height);
+  border-top: 1px solid var(--border-color);
+}
+
 /*
  * Note split look
  */
