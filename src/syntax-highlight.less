@@ -16,7 +16,10 @@
         --code-color-type: #58bea6;
         --code-color-meta: #db5e02;
         --code-color-meta-alt: #edbc12;
+        --code-color-meta-alt-alt: #e19243;
         --code-color-literal: #7d8ac7;
+        --code-color-attribute: #4e9906;
+        --code-color-builtin: #609be2;
         --code-color-link: #62a0ea;
     }
 }
@@ -49,8 +52,7 @@
     }
     
     .hljs-keyword,
-    .hljs-name,
-    .hljs-selector-tag {
+    .hljs-name {
         color: var(--code-color-keyword);
     }
     
@@ -61,28 +63,31 @@
     .hljs-template-tag,
     .hljs-template-variable,
     .hljs-type,
+    .hljs-selector-tag,
     .hljs-tag {
         color: var(--code-color-type);
     }
 
     .hljs-string .hljs-tag,
     .hljs-meta .hljs-string,
-    .hljs-literal {
+    .hljs-literal,
+    .hljs-selector-pseudo {
         color: var(--code-color-literal);
     }
 
-    .hljs-type {
+    .hljs-type,
+    .hljs-selector-pseudo,
+    .hljs-selector-tag {
         font-weight: bold;
     }
-    
+
     .hljs-meta {
         color: var(--code-color-meta-alt);
     }
 
     .hljs-deletion,
     .hljs-attr .hljs-tag,
-    .hljs-selector-attr,
-    .hljs-selector-pseudo {
+    .hljs-selector-attr {
         color: var(--code-color-meta) !important;
     }
     
@@ -90,8 +95,9 @@
         color: var(--code-color-normal);
     }
     
-    .hljs-attr {
-        color: var(--code-color-normal);
+    .hljs-attr,
+    .hljs-selector-class {
+        color: var(--code-color-attribute);
     }
     
     .hljs-bullet,
@@ -106,6 +112,22 @@
     
     .hljs-strong {
         font-weight: 700;
+    }
+
+    // CSS-specific.
+    .language-text-css {
+        .hljs-meta {
+            font-weight: bold;
+            color: var(--code-color-meta-alt-alt);
+        }
+
+        .hljs-attribute {
+            color: var(--code-color-meta);
+        }
+
+        .hljs-built_in {
+            color: var(--code-color-builtin);
+        }
     }
 }
 
