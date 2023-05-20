@@ -328,7 +328,32 @@ ul.fancytree-container li {
 
 .component.note-split > .component.ribbon-container {
   grid-area: sidebar;
-  max-width: 300px;
+  width: 300px;
+}
+
+.ribbon-button-container {
+  border: 0 !important;
+}
+
+.ribbon-top-row {
+  flex-direction: column-reverse;
+}
+
+.ribbon-tab-title {
+  padding: 0.25em 1em !important;
+  border: 0 !important;
+}
+
+.ribbon-tab-title-icon {
+  display: none !important;
+}
+
+.ribbon-tab-title-label {
+  display: block !important;
+}
+
+.ribbon-tab-spacer {
+  display: none !important;
 }
 
 .ribbon-tab-container {
