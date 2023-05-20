@@ -16,13 +16,19 @@
  * Move launcher bar on top
  */
 #root-widget {
-  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-areas:
+    "tree gutter launcher"
+    "tree gutter content";
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 #launcher-pane {
-  width: 100vw !important;
+  width: 100% !important;
   height: 53px;
   flex-direction: row !important;
+  grid-area: launcher;
 }
 
 #launcher-container {
@@ -32,4 +38,19 @@
 #launcher-pane .launcher-button {
   width: 53px;
   height: 53px;
+}
+
+#root-widget > .gutter.gutter-horizontal {
+  display: none !important;
+  grid-area: gutter;
+}
+
+#left-pane {
+  grid-area: tree;
+  width: 240px !important;
+}
+
+#rest-pane {
+  grid-area: content;
+  width: 100% !important;
 }
