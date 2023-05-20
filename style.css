@@ -404,6 +404,7 @@ ul.fancytree-container li {
 .ribbon-tab-title {
   padding: 0.25em 1em !important;
   border: 0 !important;
+  color: var(--launcher-pane-text-color) !important;
 }
 
 .ribbon-tab-title .bx {
