@@ -80,6 +80,10 @@
   align-items: center;
 }
 
+#launcher-pane {
+  contain: unset !important;
+}
+
 #launcher-pane .launcher-button {
   font-size: 19px !important;
   background-color: #dedede !important;
@@ -88,6 +92,15 @@
   height: 34px !important;
   padding: 0 !important;
   margin-left: 6px;
+}
+
+#launcher-pane .dropdown {
+  width: 63px;
+  height: 34px !important;
+}
+
+#launcher-pane .dropdown .launcher-button {
+  width: 57px;
 }
 
 #launcher-pane .spacer {
