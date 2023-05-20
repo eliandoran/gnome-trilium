@@ -39,6 +39,34 @@
   --gnome-close-button-pressed-background-color: #b3b3b3;
   --gnome-close-button-size: 24px;
   --gnome-close-button-hmargin: 11px;
+  
+  --scrollbar-track-inactive-background: transparent;
+  --scrollbar-track-active-background: #e0e0e0;
+  --scrollbar-thumb-inactive-background: #d2d2d2;
+  --scrollbar-thumb-active-background: #747474;
+}
+
+/*
+ * Scroll bar
+ *
+*/
+::-webkit-scrollbar {
+  background: var(--scrollbar-track-inactive-background);
+  width: 10px !important;
+}
+
+::-webkit-scrollbar:hover {
+  background: var(--scrollbar-track-active-background);
+}
+
+::-webkit-scrollbar-thumb:not(:hover) {
+  background: transparent !important;
+  border: 0 !important;
+  border-right: 3px solid var(--scrollbar-thumb-inactive-background) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-active-background) !important;
 }
 
 /*
