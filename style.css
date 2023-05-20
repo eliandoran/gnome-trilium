@@ -44,6 +44,8 @@
   --scrollbar-track-active-background: #e0e0e0;
   --scrollbar-thumb-inactive-background: #d2d2d2;
   --scrollbar-thumb-active-background: #747474;
+  
+  --ribbon-height: 37px;
 }
 
 /*
@@ -310,33 +312,24 @@ ul.fancytree-container li {
 /*
  * Ribbon
  */
-.component.note-split:not(.hidden-ext) {
-  display: grid !important;
-  grid-template-areas: "header header"
-    "content sidebar";
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr;
-}
-
-.component.note-split > .component {
-  grid-area: content;
-}
-
-.component.note-split > .component.title-row {
-  grid-area: header;
+.component.note-split {
+  position: relative;
+  margin-bottom: var(--ribbon-height);
 }
 
 .component.note-split > .component.ribbon-container {
-  grid-area: sidebar;
-  width: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--ribbon-height) * -1);
+  height: var(--ribbon-height);
+  background: var(--left-pane-background);
+  border-top: 1px solid var(--border-color);
+  margin: 0 !important;
 }
 
 .ribbon-button-container {
   border: 0 !important;
-}
-
-.ribbon-top-row {
-  flex-direction: column-reverse;
 }
 
 .ribbon-tab-title {
@@ -344,18 +337,10 @@ ul.fancytree-container li {
   border: 0 !important;
 }
 
-.ribbon-tab-title-icon {
-  display: none !important;
-}
-
-.ribbon-tab-title-label {
-  display: block !important;
+.ribbon-tab-title .bx {
+  font-size: 19px !important;
 }
 
 .ribbon-tab-spacer {
-  display: none !important;
-}
-
-.ribbon-tab-container {
-  display: block !important;
+  display: none;
 }
