@@ -1,3 +1,5 @@
+@header-height: 47px;
+
 :root {
   --main-font-family: 'Cantarell', sans-serif;
   --main-font-size: 11pt;
@@ -10,8 +12,9 @@
   
   --monospace-font-family: "Source Code Pro", monospace;
   --monospace-font-size: 14px;
-  
-  --header-height: 47px;
+    
+  --header-height: @header-height; // FIXME
+
   --ribbon-height: 37px;
   
   --tabbar-height: 45px; 
@@ -150,7 +153,7 @@
 
 #launcher-pane {
   width: 100% !important;
-  height: var(--header-height);
+  height: @header-height;
   flex-direction: row !important;
   grid-area: launcher;
   border-bottom: 1px solid var(--border-color);

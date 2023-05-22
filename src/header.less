@@ -18,15 +18,20 @@
 }
 
 .quick-search {
+  @search-height: 34px;
+
   position: fixed;
-  top: 0;
   left: calc((var(--item-margin-left) + var(--item-size)) * var(--header-items-left));
   right: calc((var(--item-margin-left) + var(--item-size)) * var(--header-items-right));
-  width: unset;
+  top: ((@header-height - @search-height) / 2);
+  padding: 0 !important;
+  height: unset !important;
+  width: unset !important;
   
   > input {
     max-width: var(--search-max-width);
     margin: auto;
+    height: @search-height !important;
     -webkit-app-region: no-drag;
   }
 }
