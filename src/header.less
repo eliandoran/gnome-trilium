@@ -150,30 +150,31 @@
   top: 0;
   right: var(--gnome-close-button-hmargin);
   top: calc((var(--header-height) - var(--gnome-close-button-size)) / 2);
-}
 
-.title-bar-buttons > div {
-  width: unset !important;
-  height: unset !important;
-}
+  .minimize-btn,
+  .maximize-btn {
+    display: none !important;
+  }
 
-.title-bar-buttons .minimize-btn,
-.title-bar-buttons .maximize-btn {
-  display: none !important;
-}
+  .close-btn {
+    width: unset !important;
+    height: unset !important;
 
-.title-bar-buttons .close-btn > button {
-  width: var(--gnome-close-button-size);
-  height: var(--gnome-close-button-size);
-  background-color: var(--gnome-close-button-inactive-background-color) !important;
-  color: var(--launcher-pane-text-color) !important;
-  border-radius: 50%;
-}
-
-.title-bar-buttons .close-btn > button:hover {
-  background-color: var(--gnome-close-button-hover-background-color) !important;
-}
-
-.title-bar-buttons .close-btn > button:active {
-  background-color: var(--gnome-close-button-pressed-background-color) !important;
+    & > button {
+      background-color: var(--gnome-close-button-inactive-background-color) !important;
+      color: var(--launcher-pane-text-color) !important;
+      border-radius: 50%;
+      font-size: 16px;
+      width: var(--gnome-close-button-size);
+      height: var(--gnome-close-button-size);
+    
+      &:hover {
+        background-color: var(--gnome-close-button-hover-background-color) !important;
+      }
+    
+      &:active {
+        background-color: var(--gnome-close-button-pressed-background-color) !important;
+      }
+    }
+  }
 }
