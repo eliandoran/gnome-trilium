@@ -35,6 +35,16 @@
     .note-split {
         overflow: scroll !important;
 
+        .title-row {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--content-background-color);
+            z-index: 10000;
+        }
+
         .scrolling-container {
             height: auto !important;
             overflow: unset !important;  
