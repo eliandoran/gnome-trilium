@@ -31,6 +31,21 @@
     border-right: 1px solid var(--border-color);
 }
 
+#center-pane {
+    .note-split {
+        overflow: scroll !important;
+
+        .scrolling-container {
+            height: auto !important;
+            overflow: unset !important;  
+
+            .note-detail-editable-text {
+                height: unset !important;
+            }
+        }
+    }
+}
+
 #rest-pane {
     grid-area: content;
     width: 100% !important;
