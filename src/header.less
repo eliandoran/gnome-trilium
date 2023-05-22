@@ -121,7 +121,21 @@
 }
 
 #launcher-pane .global-menu .global-menu-button {
-  background-size: 16px;
+  background-image: unset !important;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    background: linear-gradient(to bottom,
+      var(--launcher-pane-text-color) 0%, var(--launcher-pane-text-color) 20%,
+      transparent 20%, transparent 40%,
+      var(--launcher-pane-text-color) 40%, var(--launcher-pane-text-color) 60%,
+      transparent 60%, transparent 80%,
+      var(--launcher-pane-text-color) 80%, var(--launcher-pane-text-color) 100%);
+  }
 }
 
 /*
