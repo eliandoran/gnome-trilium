@@ -5,38 +5,42 @@ ul.fancytree-container li {
     contain: layout !important;
 }
 
-.fancytree-node {
-    height: 30px;
-    border: 0 !important;
+.tree {
+    overflow-y: overlay !important;
 
-    .fancytree-custom-icon {
-        color: var(--left-pane-icon-color);
-        font-weight: bold;
-        font-size: 17px;
-    }
+    .fancytree-node {
+        height: 30px;
+        border: 0 !important;
 
-    &.fancytree-active {
-        position: relative;
-        overflow: visible;
-        background: transparent !important;
+        .fancytree-custom-icon {
+            color: var(--left-pane-icon-color);
+            font-weight: bold;
+            font-size: 17px;
+        }
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -500%;
-            right: 0;
-            bottom: 0;
-            background: var(--active-item-background-color);
-            z-index: -1;
+        &.fancytree-active {
+            position: relative;
+            overflow: visible;
+            background: transparent !important;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -500%;
+                right: 0;
+                bottom: 0;
+                background: var(--active-item-background-color);
+                z-index: -1;
+            }
         }
     }
-}
 
-.fancytree-expander::before {
-    font-size: 1em !important;
-    font-weight: bold !important;
-    color: var(--left-pane-text-color);
+    .fancytree-expander::before {
+        font-size: 1em !important;
+        font-weight: bold !important;
+        color: var(--left-pane-text-color);
+    }
 }
 
 /*
