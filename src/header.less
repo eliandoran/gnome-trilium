@@ -75,8 +75,7 @@
 }
 
 #launcher-pane .launcher-button,
-#launcher-pane .global-menu-button,
-.note-new-tab {
+#launcher-pane .global-menu-button {
   font-size: 19px !important;
   background-color: var(--toolbar-button-inactive-background-color) !important;
   border-radius: 4px;
@@ -84,21 +83,24 @@
   height: var(--item-size) !important;
   padding: 0 !important;
   margin-left: var(--item-margin-left);
-}
 
-#launcher-pane .launcher-button:hover,
-#launcher-pane .global-menu-button:hover {
-  background-color: var(--toolbar-button-hover-background-color) !important;
-}
+  &:hover {
+    background-color: var(--toolbar-button-hover-background-color) !important;
+  }
 
-#launcher-pane .launcher-button:active,
-#launcher-pane .global-menu-button:hover {
-  background-color: var(--toolbar-button-active-background-color) !important;
+  &:active {
+    background-color: var(--toolbar-button-active-background-color) !important;
+  }
 }
 
 #launcher-pane .dropdown {
   height: 34px !important;
   width: var(--item-size);
+  margin-left: var(--item-margin-left);
+
+  > button {
+    margin-left: 0;
+  }
 }
 
 #launcher-pane .sync-status-widget {
