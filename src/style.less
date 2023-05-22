@@ -12,9 +12,9 @@
   
   --monospace-font-family: "Source Code Pro", monospace;
   --monospace-font-size: 14px;
-    
+  
   --header-height: @header-height; // FIXME
-
+  
   --ribbon-height: 37px;
   
   --tabbar-height: 45px; 
@@ -25,6 +25,7 @@
   --input-text-color: var(--main-text-color);
   --button-text-color: var(--main-text-color);
   --main-border-color: #dbdbdb;
+  --main-background-color: var(--left-pane-background-color);
 
   --launcher-pane-text-color: #2f2f2f;
   --launcher-pane-background-color: #ebebeb; 
@@ -66,8 +67,11 @@
   --modal-header-background-color: #ebebeb;
   --modal-background-color: #ffffff;
 
-  --search-background: #d8d8d8;
-  --search-foreground: #2b2b2b;
+  --input-text-color: #2b2b2b;
+  --input-background-color: #d8d8d8;
+
+  --search-background: var(--input-background-color);
+  --search-foreground: var(--input-text-color);
   --search-foreground-muted: #5f5f5f;
   --search-outline: #7aa5d8;
 
@@ -129,8 +133,11 @@
     --modal-header-background-color: #303030;
     --modal-background-color: #1e1e1e;    
 
-    --search-background: #454545;
-    --search-foreground: #ffffff;
+    --input-text-color: #ffffff;
+    --input-background-color: #454545;
+
+    --search-background: var(--input-background-color);
+    --search-foreground: var(--input-text-color);
     --search-foreground-muted: #c7c7c7;
     --search-outline: #5f7999;
 
