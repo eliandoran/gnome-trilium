@@ -105,13 +105,15 @@
 
 #launcher-pane .sync-status-widget {
   position: relative;
-}
+  line-height: var(--item-size);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 
-#launcher-pane .sync-status-widget .sync-status-icon {
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
+  .sync-status-icon {
+    top: 2px !important;
+  }
 }
 
 #launcher-pane .global-menu {
