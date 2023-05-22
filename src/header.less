@@ -19,12 +19,13 @@
 
 .quick-search {
   @search-height: 34px;
+  @search-padding: 13px;
 
   position: fixed;
   top: ((@header-height - @search-height) / 2);
   left: 0;
   right: 0;
-  padding: 0 !important;
+  padding: 0 @search-padding !important;
   height: unset !important;
   width: var(--search-width) !important;
   height: @search-height !important;
@@ -35,10 +36,14 @@
   --left-pane-text-color: var(--search-foreground-muted);
   --left-pane-background-color: var(--search-background);
   
-  > .input-group-prepend {
+  > .input-group-prepend {    
     display: inline-block;
     line-height: @search-height;
-    margin: 0;
+    margin-right: @search-padding;
+    
+    .btn {
+      padding: 0;
+    }
   }
   
   > input {
@@ -46,6 +51,7 @@
     height: unset !important;
     -webkit-app-region: no-drag;
     color: var(--search-foreground);
+    padding: 0 !important;
   }
 }
 
