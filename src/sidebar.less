@@ -1,0 +1,53 @@
+/*
+ * Tree style
+ */
+ul.fancytree-container li {
+    contain: layout !important;
+}
+
+.fancytree-node {
+    height: 30px;
+    border: 0 !important;
+}
+
+.fancytree-node.fancytree-active {
+    position: relative;
+    overflow: visible;
+    background: transparent !important;
+}
+
+.fancytree-node.fancytree-active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -500%;
+    right: 0;
+    bottom: 0;
+    background: var(--active-item-background-color);
+    z-index: -1;
+}
+
+.fancytree-expander::before {
+    font-size: 1em !important;
+    font-weight: bold !important;
+    color: var(--left-pane-text-color);
+}
+
+/*
+ * Tree actions
+ */
+.tree-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-actions {
+    position: unset !important;
+    background: unset !important;
+    border-top: 1px solid var(--border-color);
+    justify-content: space-evenly !important;
+}
+
+.tree-actions button.tree-floating-button {
+    font-size: 16px;
+}
