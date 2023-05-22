@@ -1,3 +1,12 @@
+:root {
+  --item-margin-left: 6px;
+  --item-size: 34px;
+
+  --header-items-left: 2;
+  --header-items-right: 6;
+  --search-max-width: 400px;
+}
+
 #launcher-pane {
   -webkit-app-region: drag;
 }
@@ -9,8 +18,17 @@
 }
 
 .quick-search {
-  height: var(--tabbar-height) !important;
-  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: calc((var(--item-margin-left) + var(--item-size)) * var(--header-items-left));
+  right: calc((var(--item-margin-left) + var(--item-size)) * var(--header-items-right));
+  width: unset;
+  
+  > input {
+    max-width: var(--search-max-width);
+    margin: auto;
+    -webkit-app-region: no-drag;
+  }
 }
 
 #launcher-container {
@@ -43,10 +61,10 @@
   font-size: 19px !important;
   background-color: var(--toolbar-button-inactive-background-color) !important;
   border-radius: 4px;
-  width: 34px !important;
-  height: 34px !important;
+  width: var(--item-size) !important;
+  height: var(--item-size) !important;
   padding: 0 !important;
-  margin-left: 6px;
+  margin-left: var(--item-margin-left);
 }
 
 #launcher-pane .launcher-button:hover,
