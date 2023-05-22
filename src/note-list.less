@@ -5,9 +5,35 @@
         box-shadow: 2px 3px 4px var(--card-shadow-color);
         border-radius: 12px;
         user-select: none;
+        padding: 15px 22px;        
 
         &:active {
             background-color: var(--card-background-press-color);
         }
+
+        a {
+            color: inherit !important;
+        }
+
+        .note-book-header {
+            font-size: 1.1em;
+            font-weight: bold;
+
+            .note-book-title {            
+                font-size: 1em;
+                color: var(--active-item-text-color);
+            }
+        }
+
+        .note-book-content {
+            padding: 0 !important;
+            font-size: 0.8rem;
+
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 1rem;
+                color: var(--active-item-text-color);
+            }
+        }
+
     }
 }
