@@ -1,0 +1,37 @@
+#root-widget {
+    display: grid !important;
+    grid-template-areas:
+        "launcher launcher launcher"
+        "tree gutter content";
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+#launcher-pane {
+    width: 100% !important;
+    height: @header-height;
+    flex-direction: row !important;
+    grid-area: launcher;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#launcher-container {
+    flex-direction: row !important;
+    justify-content: center;
+}
+
+#root-widget>.gutter.gutter-horizontal {
+    display: none !important;
+    grid-area: gutter;
+}
+
+#left-pane {
+    grid-area: tree;
+    width: 301px !important;
+    border-right: 1px solid var(--border-color);
+}
+
+#rest-pane {
+    grid-area: content;
+    width: 100% !important;
+}
