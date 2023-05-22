@@ -15,6 +15,16 @@
 
 #launcher-container {
   align-items: center;
+  justify-content: flex-start;
+
+  .spacer {
+    width: 18px;
+    flex: unset !important;
+
+    &:first-of-type {
+      flex-grow: 1 !important;
+    }
+  }
 }
 
 #launcher-pane {
@@ -56,11 +66,6 @@
 
 #launcher-pane .dropdown .launcher-button {
   width: 57px;
-}
-
-#launcher-pane .spacer {
-  width: 18px;
-  flex: unset !important;
 }
 
 #launcher-pane .sync-status-widget {
