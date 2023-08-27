@@ -49,6 +49,7 @@
   --gnome-close-button-hover-background-color: #cfcfcf;
   --gnome-close-button-pressed-background-color: #b3b3b3;
   
+  --scrollbar-track-border: #1e1e1e;
   --scrollbar-track-inactive-background: transparent;
   --scrollbar-track-active-background: #e0e0e0;
   --scrollbar-thumb-inactive-background: #d2d2d2;
@@ -115,10 +116,11 @@
     --gnome-close-button-hover-background-color: #4f4f4f;
     --gnome-close-button-pressed-background-color: #6e6e6e;
     
+    --scrollbar-track-border: #1e1e1e;
     --scrollbar-track-inactive-background: transparent;
-    --scrollbar-track-active-background: #e0e0e0;
+    --scrollbar-track-active-background: #3a3a3a;
     --scrollbar-thumb-inactive-background: #d2d2d2;
-    --scrollbar-thumb-active-background: #747474;
+    --scrollbar-thumb-active-background: #898989;
 
     --ribbon-popup-background-color: #fff;
     --ribbon-popup-border-color: #d8d8d8;
@@ -164,16 +166,21 @@
 
 ::-webkit-scrollbar:hover {
   background: var(--scrollbar-track-active-background);
+  border: 1px solid var(--scrollbar-track-border) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0 !important;
 }
 
 ::-webkit-scrollbar-thumb:not(:hover) {
   background: transparent !important;
-  border: 0 !important;
   border-right: 3px solid var(--scrollbar-thumb-inactive-background) !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-active-background) !important;
+  background: var(--scrollbar-thumb-active-background) !important;  
+  border: 1px solid var(--scrollbar-track-border) !important;
 }
 
 .tooltip {
