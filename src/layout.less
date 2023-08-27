@@ -1,17 +1,11 @@
 #root-widget {
-    display: grid !important;
-    grid-template-areas:
-        "launcher launcher launcher"
-        "tree gutter content";
-    grid-template-columns: auto auto 1fr;
-    grid-template-rows: auto 1fr;
+    flex-wrap: wrap;
 }
 
 #launcher-pane {
     width: 100% !important;
     height: @header-height;
     flex-direction: row !important;
-    grid-area: launcher;
     border-bottom: 1px solid var(--main-border-color);
 }
 
@@ -20,42 +14,14 @@
     justify-content: center;
 }
 
-#root-widget>.gutter.gutter-horizontal {
-    display: none !important;
-    grid-area: gutter;
-}
-
 #left-pane {
-    grid-area: tree;
-    width: 301px !important;
-    border-right: 1px solid var(--main-border-color);
+    height: unset !important;
 }
 
-#center-pane {
-    .note-split {
-        overflow: scroll !important;
-
-        .title-row {
-            position: sticky;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to bottom, var(--content-background-color) 95%, transparent 100%);
-            z-index: 500;
-        }
-
-        .scrolling-container {
-            height: auto !important;
-            overflow: unset !important;  
-
-            .note-detail-editable-text {
-                height: unset !important;
-            }
-        }
-    }
+#left-pane, #rest-pane {
+    height: calc(100% - @header-height) !important;
 }
 
 #rest-pane {
-    grid-area: content;
-    width: 100% !important;
+    width: unset !important;
 }
