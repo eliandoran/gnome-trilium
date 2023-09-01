@@ -1,12 +1,25 @@
 .global-menu .dropdown-menu {
-    //display: block;
+    display: block;
     position: absolute;
     transform: translate(-221px, 0px) !important;
     top: @header-height !important;
     left: 0px;
     box-shadow: var(--menu-box-shadow);
 
+    // Hide icons
+    span.bx { display: none !important; }
+
+    // Submenus
     .dropdown-menu {
         left: calc(-25% - 3px) !important;
     }
+
+    .dropdown-item {
+        border: unset !important;
+        padding: 5px 12px !important;
+        margin: 0 6px !important;
+        width: unset !important;
+        border-radius: 5px;
+    }
+
 }
