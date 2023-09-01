@@ -19,10 +19,33 @@
     }
 }
 
-.ck-content code {
-    background: var(--card-background-color) !important;
+.ck-content pre,
+.note-detail-doc-content pre {
+    background: var(--content-background-color);
+    border: 1px solid var(--card-border-color) !important;
+    box-shadow: var(--card-box-shadow);
+    border-radius: 10px;
+}
+
+.ck.ck-editor__editable pre[data-language]:after {
+    border-radius: 0 0 6px 6px;
+    padding: 0.25em 0.75em;
+    background: var(--content-background-color);
+    color: var(--left-pane-icon-color);
     border: 1px solid var(--card-border-color);
-    box-shadow: 0 0 3px var(--card-shadow-color);
+    min-width: 40px;
+    text-align: center;
+}
+
+pre:not(.CodeMirror-line) {
+    font-size: var(--monospace-font-size) !important;
+    line-height: 1.4; 
+}
+
+.ck-content code {
+    background: var(--content-background-color) !important;
+    border: 1px solid var(--card-border-color);
+    box-shadow: var(--card-box-shadow);
     border-radius: 6px;
 }
 
