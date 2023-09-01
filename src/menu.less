@@ -1,11 +1,26 @@
 .global-menu .dropdown-menu {
-    display: block;
+    // Uncomment to force to be always shown.
+    //display: block;
+
     position: absolute;
     transform: translate(-221px, 0px) !important;
-    top: @header-height !important;
+    top: 46px !important;
     left: 0px;
     box-shadow: var(--menu-box-shadow);
+    border-radius: 10px;
     --hover-item-text-color: var(--menu-text-color);
+
+    // Top arrow
+    &::before {
+        @size: 11px;
+        content: "";
+        position: absolute;
+        top: -@size;
+        border-left: @size solid transparent;
+        border-right: @size solid transparent;
+        border-bottom: @size solid var(--menu-background-color);
+        right: 45px;
+    }
 
     // Hide icons
     span.bx { display: none !important; }
