@@ -7,16 +7,20 @@
     }
 }
 
-.note-detail-editable-text *::selection {
+.note-detail-editable-text {
+    *::selection {
     background-color: var(--code-selection-active-background);
 }
 
-.note-detail-editable-text a {
+    a {
     text-decoration: underline !important;
 
     &:after {
         content: unset !important;
     }
+}
+
+    padding: 10px !important;
 }
 
 .ck-content pre,
