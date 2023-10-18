@@ -3,3 +3,9 @@ source ./upload.local.sh
   --header "Authorization: $ETAPI_TOKEN" \
   --header "Content-Type: text/plain" \
   --upload-file output.css
+
+if [ $? -eq 0 ]; then
+  echo "Upload successful. Refresh Trilium to see the updated theme."
+else
+  echo "Upload failed."
+fi
