@@ -9,16 +9,16 @@
 
 .note-detail-editable-text {
     *::selection {
-    background-color: var(--code-selection-active-background);
-}
+        background-color: var(--code-selection-active-background);
+    }
 
     a {
-    text-decoration: underline !important;
+        text-decoration: underline !important;
 
-    &:after {
-        content: unset !important;
+        &:after {
+            content: unset !important;
+        }
     }
-}
 
     padding: 10px !important;
 }
@@ -59,6 +59,11 @@ pre:not(.CodeMirror-line) {
         border: unset;
         box-shadow: unset;
         border-radius: unset;
+    }
+
+    hr {
+        height: 1px;
+        background-color: var(--main-border-color);
     }
 
     blockquote {
