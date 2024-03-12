@@ -1,21 +1,28 @@
+@border-radius: 10px;
+
 .modal-dialog {
     .modal-content {
+        border-radius: @border-radius !important;
+        border: 1px solid var(--card-border-color);
+
         .modal-header {
             padding: 0.5em 1em !important;
             border-bottom-color: var(--main-border-color);
             background-color: var(--modal-header-background-color);
+            border-top-left-radius: @border-radius !important;
+            border-top-right-radius: @border-radius !important;
         }
 
         .modal-footer {
             border-top-color: var(--main-border-color);
+            border-bottom-color: var(--card-border-color);
             background-color: var(--modal-header-background-color);
+            border-bottom-left-radius: @border-radius !important;
+            border-bottom-right-radius: @border-radius !important;
         }
     }
 }
 
 .modal.jump-to-note-dialog {
-    .modal-header,
-    label[for="jump-to-note-autocomplete"] {
-        display: none !important;
-    }
+    
 }
