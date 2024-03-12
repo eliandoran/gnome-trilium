@@ -1,8 +1,25 @@
 .options-section {
+    --card-padding: 17px;
+    --title-font-size: 1rem;
+    --title-offset: 13px;
+
     border-radius: 12px;
     border: 1px solid var(--card-border-color) !important;
     box-shadow: var(--card-box-shadow);
     background: var(--card-background-color);
-    padding: 17px;
-    margin-bottom: 26px !important;
+    padding: var(--card-padding);
+    margin-bottom: calc(var(--title-offset) + 26px) !important;
+
+    &:first-of-type {
+        margin-top: calc(var(--title-offset) + var(--title-font-size));
+    }
+
+    h4 {
+        font-size: var(--title-font-size);
+        font-weight: bold;
+        color: var(--launcher-pane-text-color);
+        margin-top: calc(-1 * var(--card-padding) - var(--title-font-size) - var(--title-offset)) !important;
+        margin-bottom: calc(var(--title-offset) + var(--card-padding)) !important;
+        margin-left: calc(-1 * var(--card-padding));
+    }
 }
