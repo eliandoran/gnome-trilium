@@ -1,8 +1,15 @@
 source ./upload.local.sh
-./build.sh && curl http://localhost:37840/etapi/notes/$NOTE_ID/content \
+./build.sh
+
+curl http://localhost:37840/etapi/notes/$VANILLA_NOTE_ID/content \
   --header "Authorization: $ETAPI_TOKEN" \
   --header "Content-Type: text/plain" \
-  --upload-file output.css
+  --upload-file vanilla.css
+
+curl http://localhost:37840/etapi/notes/$MINT_Y_NOTE_ID/content \
+  --header "Authorization: $ETAPI_TOKEN" \
+  --header "Content-Type: text/plain" \
+  --upload-file mint-y.css
 
 if [ $? -eq 0 ]; then
   echo "Upload successful. Refresh Trilium to see the updated theme."
